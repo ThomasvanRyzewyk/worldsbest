@@ -1,11 +1,34 @@
 {{ define "main" }}
 <article>
-  <h2>{{ .Title }}</h2>
-  {{ with .Params.dek }}<div>{{ . }}</div>{{ end }}
+  <header class="product-header">
+    <h2>{{ .Title }}</h2>
+    {{ with .Params.dek }}<div class="kicker">{{ . }}</div>{{ end }}
+  </header>
+
   {{ with .Params.hero_image }}
-    <p><img src="{{ . }}" alt="{{ $.Title }}" style="max-width:300px;height:auto"></p>
+    <p><img src="{{ . }}" alt="{{ $.Title }} hero" style="max-width:320px;height:auto"></p>
   {{ end }}
-  <div>{{ .Content }}</div>
+
+  {{ with .Params.why_its_best }}
+    <ul class="list">
+      {{ range . }}<li>{{ . }}</li>{{ end }}
+    </ul>
+  {{ end }}
+
+  {{ if .Params.gallery }}
+    <div class="gallery">
+      {{ range .Params.gallery }}<img src="{{ . }}" alt="{{ $.Title }} gallery">{{ end }}
+    </div>
+  {{ end }}
+
+  <div class="review">{{ .Content }}</div>
+
+  {{/* Affiliate button resolved from /data/affiliates.yml by slug */}}
+  {{ $slug := .Params.slug | default .File.BaseFileName }}
+  {{ with (index site.Data.affiliates $slug) }}
+    <p><a class="btn" href="{{ .url }}" target="_blank" rel="sponsored noopener">Buy — {{ .label }}</a></p>
+  {{ end }}
+
   <p><a href="/" class="btn">← Back</a></p>
 </article>
 {{ end }}
