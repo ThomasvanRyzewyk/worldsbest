@@ -1,0 +1,16 @@
+sony-wh-1000xm5:
+  url: "https://amzn.to/example-sony"
+  label: "Amazon"
+
+iphone-15-pro:
+  url: "https://amzn.to/example-iphone"
+  label: "Amazon"
+
+moleskine-classic:
+  url: "https://amzn.to/example-moleskine"
+  label: "Amazon"
+
+levis-501:
+  url: "https://amzn.to/example-levis"
+  label: "Amazon"
+
