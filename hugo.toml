@@ -1,7 +1,6 @@
 baseURL = "/"
 title = "The World’s Best"
 languageCode = "en-us"
-theme = ""
 
 [pagination]
   pagerSize = 20
