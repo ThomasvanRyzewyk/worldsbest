@@ -10,6 +10,3 @@ languageCode = "en-us"
 
 [params]
   brand = "THE WORLD’S BEST"
-
-[outputs]
-  home = ["HTML", "RSS", "REDIRECTS"]
