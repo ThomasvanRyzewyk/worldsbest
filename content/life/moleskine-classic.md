@@ -4,13 +4,13 @@ slug: "moleskine-classic"
 category: "Life"
 subcategory: "Stationery"
 brand: "Moleskine"
-dek: "The default notebook — simple, durable, everywhere."
+dek: "Portable, lay-flat, feels good to fill."
 hero_image: "/images/moleskine-classic/01.jpg"
 gallery: []
 why_its_best:
-  - "Fits in any bag or jacket pocket."
-  - "Durable binding, paper good enough for most pens."
-  - "Instantly recognizable."
+  - "Opens flat; easy to write to the edges."
+  - "Elastic band + pocket keep it tidy."
+  - "Available everywhere; you’ll actually use it."
 updated: "2025-09-17"
 ---
-The Moleskine is the platonic ideal of a notebook: not too fancy, not too cheap, and available everywhere.
+The platonic ideal of a notebook: not precious, not junk. It lives in your bag, takes notes cleanly, and survives meetings, travel, and coffee spills.
