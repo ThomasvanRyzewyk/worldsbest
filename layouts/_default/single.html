@@ -1,0 +1,11 @@
+{{ define "main" }}
+<article>
+  <h2>{{ .Title }}</h2>
+  {{ with .Params.dek }}<div>{{ . }}</div>{{ end }}
+  {{ with .Params.hero_image }}
+    <p><img src="{{ . }}" alt="{{ $.Title }}" style="max-width:300px;height:auto"></p>
+  {{ end }}
+  <div>{{ .Content }}</div>
+  <p><a href="/" class="btn">← Back</a></p>
+</article>
+{{ end }}

@@ -1,0 +1,9 @@
+{{ define "main" }}
+<ul class="list">
+  {{ range .Pages.ByDate.Reverse }}
+  <li>
+    <a href="{{ .RelPermalink }}"><b>{{ .Title }}</b> — {{ with .Params.dek }}{{ . }}{{ end }}</a>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}

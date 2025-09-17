@@ -1,0 +1,14 @@
+baseURL = "/"
+title = "The World’s Best"
+languageCode = "en-us"
+theme = ""
+
+[pagination]
+  pagerSize = 20
+
+[permalinks]
+  products = "/:sections/:slug/"
+
+[params]
+  brand = "THE WORLD’S BEST"
+
