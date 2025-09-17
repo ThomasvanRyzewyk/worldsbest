@@ -4,7 +4,21 @@
   <meta charset="utf-8">
   <title>{{ if .Title }}{{ .Title }} — {{ end }}{{ site.Title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="canonical" href="https://theworldsbest.site{{ .RelPermalink }}"> 
+  <!-- Canonical -->
+  <link rel="canonical" href="https://theworldsbest.site{{ .RelPermalink }}">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ if .IsPage }}{{ .Title }} — {{ end }}{{ site.Title }}">
+  <meta property="og:description" content="{{ with .Params.dek }}{{ . }}{{ else }}{{ .Summary | plainify }}{{ end }}">
+  <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+  <meta property="og:url" content="https://theworldsbest.site{{ .RelPermalink }}">
+  {{ with .Params.hero_image }}<meta property="og:image" content="https://theworldsbest.site{{ . }}">{{ end }}
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ if .IsPage }}{{ .Title }} — {{ end }}{{ site.Title }}">
+  <meta name="twitter:description" content="{{ with .Params.dek }}{{ . }}{{ else }}{{ .Summary | plainify }}{{ end }}">
+  {{ with .Params.hero_image }}<meta name="twitter:image" content="https://theworldsbest.site{{ . }}">{{ end }}
   <style>
     :root{--max:800px}
     body{margin:0;padding:40px 20px;font:16px/1.5 "Times New Roman",serif;color:#111;background:#fff}
