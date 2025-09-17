@@ -2,10 +2,6 @@ sony-wh-1000xm5:
   url: "https://amzn.to/example-sony"
   label: "Amazon"
 
-iphone-15-pro:
-  url: "https://amzn.to/example-iphone"
-  label: "Amazon"
-
 moleskine-classic:
   url: "https://amzn.to/example-moleskine"
   label: "Amazon"
@@ -14,3 +10,11 @@ levis-501:
   url: "https://amzn.to/example-levis"
   label: "Amazon"
 
+colgate-total: { url: "https://amzn.to/your-link", label: "Amazon" }
+pilot-g2-07: { url: "https://amzn.to/your-link", label: "Amazon" }
+levis-501: { url: "https://amzn.to/your-link", label: "Amazon" }
+nike-air-force-1: { url: "https://amzn.to/your-link", label: "Nike" }
+gshock-dw5600: { url: "https://amzn.to/your-link", label: "Amazon" }
+di-fara: { url: "https://your-fav-pizza-link", label: "Visit" }
+ethiopian-yirgacheffe: { url: "https://your-roaster-link", label: "Buy beans" }
+pilsner-urquell: { url: "https://your-retailer-link", label: "Buy" }
