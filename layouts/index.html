@@ -1,0 +1,29 @@
+{{ define "main" }}
+<section class="home-hero">
+  <p class="home-lead">Life, Style, Food & Drink, and Technology</p>
+  <div class="home-social">
+    <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a> ·
+    <a href="https://www.threads.net/" target="_blank" rel="noopener">Threads</a> ·
+    <a href="https://x.com/" target="_blank" rel="noopener">X</a>
+  </div>
+</section>
+
+{{ $sections := slice "life" "style" "food-and-drink" "technology" }}
+{{ range $sections }}
+  <section>
+    <h3 class="section-title">{{ humanize . }}</h3>
+    <ul class="list">
+      {{ range first 5 (where site.RegularPages "Section" .) }}
+        <li>
+          <a href="{{ .RelPermalink }}">
+            <b>{{ .Title }}</b>{{ with .Params.dek }} — {{ . }}{{ end }}
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+    <p><a class="btn" href="/{{ . }}/">View all →</a></p>
+  </section>
+{{ end }}
+{{ end }}
+
+  
