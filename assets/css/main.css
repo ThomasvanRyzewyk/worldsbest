@@ -1,0 +1,18 @@
+:root{--max:800px}
+*{box-sizing:border-box}
+body{margin:0;padding:40px 20px;background:#fff;color:#111;font:16px/1.5 "Times New Roman",Times,serif}
+.wrap{max-width:var(--max);margin:0 auto}
+h1{font:700 2.5em/1 Arial,Helvetica,sans-serif;text-align:center;margin:0 0 10px}
+.sub{font:14px/1.4 Arial,Helvetica,sans-serif;color:#555;text-align:center;margin-bottom:30px}
+.section-title{font:700 14px/1 Arial,Helvetica,sans-serif;text-transform:uppercase;border-top:2px solid #000;padding-top:10px;margin:34px 0 10px}
+.list{list-style:none;margin:0;padding:0}
+.list li{padding:12px 0;border-top:1px solid #e6e6e6}
+.list a{text-decoration:none;color:inherit}
+.btn{display:inline-block;margin-top:12px;padding:6px 10px;border:1px solid #ddd;border-radius:4px;text-decoration:none;color:#333;font:14px Arial,Helvetica,sans-serif}
+.product-header{border-bottom:2px solid #000;margin:0 0 1rem;padding:0 0 .5rem}
+.kicker{font:14px Arial,Helvetica,sans-serif;color:#666}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin:18px 0}
+.gallery img{width:100%;height:auto;border:1px solid #ddd}
+.home-hero{margin-bottom:24px;text-align:center}
+.home-lead{margin:0 0 6px;color:#333}
+.home-social a{font:14px Arial,Helvetica,sans-serif;color:#333}

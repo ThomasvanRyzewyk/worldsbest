@@ -4,37 +4,25 @@
   <meta charset="utf-8">
   <title>{{ if .Title }}{{ .Title }} — {{ end }}{{ site.Title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Canonical -->
+  {{ $css := resources.Get "css/main.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
   <link rel="canonical" href="https://theworldsbest.site{{ .RelPermalink }}">
-
   <!-- Open Graph -->
   <meta property="og:title" content="{{ if .IsPage }}{{ .Title }} — {{ end }}{{ site.Title }}">
   <meta property="og:description" content="{{ with .Params.dek }}{{ . }}{{ else }}{{ .Summary | plainify }}{{ end }}">
   <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
   <meta property="og:url" content="https://theworldsbest.site{{ .RelPermalink }}">
   {{ with .Params.hero_image }}<meta property="og:image" content="https://theworldsbest.site{{ . }}">{{ end }}
-
-  <!-- Twitter Card -->
+  <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ if .IsPage }}{{ .Title }} — {{ end }}{{ site.Title }}">
   <meta name="twitter:description" content="{{ with .Params.dek }}{{ . }}{{ else }}{{ .Summary | plainify }}{{ end }}">
   {{ with .Params.hero_image }}<meta name="twitter:image" content="https://theworldsbest.site{{ . }}">{{ end }}
-  <style>
-    :root{--max:800px}
-    body{margin:0;padding:40px 20px;font:16px/1.5 "Times New Roman",serif;color:#111;background:#fff}
-    .wrap{max-width:var(--max);margin:0 auto}
-    h1{font:700 2.5em/1 Arial,Helvetica,sans-serif;text-align:center;margin:0 0 10px}
-    .sub{font:14px/1.4 Arial,Helvetica,sans-serif;color:#555;text-align:center;margin-bottom:30px}
-    .list{list-style:none;padding:0}
-    .list li{padding:12px 0;border-top:1px solid #ddd}
-    .list a{text-decoration:none;color:inherit}
-    .btn{display:inline-block;margin-top:20px;padding:6px 10px;border:1px solid #ddd;border-radius:4px;text-decoration:none;color:#333;font:14px Arial,Helvetica,sans-serif}
-  </style>
 </head>
 <body>
   <main class="wrap">
     <h1>{{ site.Params.brand }}</h1>
-    <div class="sub">Life, Style, Food & Drink, and Technology. Only the best.</div>
+    <div class="sub">One choice per category. Nothing else.</div>
     {{ block "main" . }}{{ end }}
   </main>
 </body>
